@@ -32,9 +32,9 @@ Instance:Visible(false)
 Create a Window
 ```lua
 local Window = redzlib:MakeWindow({
-  Title = "REDz HUB : Example",
-  SubTitle = "by : redz9999",
-  LoadText = "redz Hub",
+  Title = "REDz Hub brookhaven",
+  SubTitle = "by : alodozhynn",
+  LoadText = "REDz library v4",
   Flags = "redz Hub | Example.lua"
 })
 
@@ -47,8 +47,8 @@ local Window = redzlib:MakeWindow({
 Create a Notification
 ```lua
 local Notify = Library:MakeNotify({
-  Title = "Notification",
-  Text = "This is a Notification",
+  Title = "REDz Hub",
+  Text = "red Hub carregado",
   Time = 5
 })
 
@@ -60,7 +60,13 @@ local Notify = Library:MakeNotify({
 ## Tab
 Create a Tab
 ```lua
-local Tab = Window:MakeTab({Name = "Tab", Icon = "Home"})
+local inicioTab = Window:MakeTab({Name = "Inicio", Icon = "Home"})
+
+local casasTab = Window:MakeTab({Name = "Casas", Icon = "Home"})
+
+local carrosTab = Window:MakeTab({Name = "Carros", Icon = "Home"})
+
+local trollarTab = Window:MakeTab({Name = "Trollar", Icon = "Home"})
 
 --[[
   Tab:Set("New Icon or Name")
@@ -70,7 +76,7 @@ local Tab = Window:MakeTab({Name = "Tab", Icon = "Home"})
 ## Section
 Create a Section
 ```lua
-local Section = Tab:AddSection({"This is a Section"})
+local Section = Tab:AddSection({"Trollar jogadores"})
 
 --[[
   Section:Set("Section")
@@ -80,7 +86,7 @@ local Section = Tab:AddSection({"This is a Section"})
 ## Paragraph
 Create a Paragraph
 ```lua
-local Paragraph = Tab:AddParagraph({"Paragraph", "this is a Paragraph"})
+local Paragraph = Tab:AddParagraph({"Aviso rapido", "Algumas funçoes não estão funcionando. muito bem"})
 
 --[[
   Paragraph:Set("New Text")
@@ -92,7 +98,7 @@ local Paragraph = Tab:AddParagraph({"Paragraph", "this is a Paragraph"})
 ## Label
 Create a Text Label
 ```lua
-local TextLabel = Tab:AddLabel({"Text", "This is a Text Label"})
+local TextLabel = Tab:AddLabel({"red", "redz hub"})
 
 --[[
   TextLabel:Set("New Name")
@@ -101,7 +107,7 @@ local TextLabel = Tab:AddLabel({"Text", "This is a Text Label"})
 
 Create a Image Label
 ```lua
-local ImageLabel = Tab:AddLabel({"Image", "This is a Image Label", "rbxassetid://"})
+local ImageLabel = Tab:AddLabel({"Image", "This is a Image Label", "rbxassetid://1"})
 
 --[[
   ImageLabel:Set("New Name", "New Image")
@@ -112,7 +118,7 @@ local ImageLabel = Tab:AddLabel({"Image", "This is a Image Label", "rbxassetid:/
 Create a Button
 ```lua
 local Button = Tab:AddButton({
-  Name = "Button",
+  Name = "Matar Jogador",
   Callback = function()
     
   end
@@ -131,7 +137,7 @@ local Button = Tab:AddButton({
 Create a Toggle
 ```lua
 local Toggle = Tab:AddToggle({
-  Name = "Toggle",
+  Name = "Nao se sentar em itens/carros",
   Default = false,
   Callback = function(Value)
     
@@ -151,9 +157,9 @@ local Toggle = Tab:AddToggle({
 Create a Dropdown
 ```lua
 local Dropdown = Tab:AddDropdown({
-  Name = "Dropdown",
-  Options = {"1", "2", "3"}
-  Default = {"2"}
+  Name = "Selecionar jogador para matar/puxar",
+  Options = {"alodo", "alodo2", "alodo3"}
+  Default = {"alodo"}
   MultSelect = false
   Callback = function(Value)
     
@@ -176,10 +182,10 @@ local Dropdown = Tab:AddDropdown({
 Create a Slider
 ```lua
 local Slider = Tab:AddSlider({
-  Name = "Slider",
-  MinValue = 1,
-  MaxValue = 10,
-  Default = 5,
+  Name = "Velocicade",
+  MinValue = 0,
+  MaxValue = 16,
+  Default = 16,
   Increase = 1,
   Callback = function(Value)
     
@@ -199,9 +205,9 @@ local Slider = Tab:AddSlider({
 Create a Discord Invite
 ```lua
 Tab:AddDiscordInvite({
-  DiscordTitle = "REDz Hub | Community",
+  DiscordTitle = "Made by alodozhynn",
   DiscordIcon = "rbxassetid://15298567397",
-  DiscordLink = "https://discord.gg/7aR7kNVt4g"
+  DiscordLink = "youtube.com/c/AlodoTocagaming11"
 })
 ```
 
